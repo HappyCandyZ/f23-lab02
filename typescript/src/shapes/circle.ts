@@ -1,17 +1,16 @@
-interface Circle {
-    getRadius: () => number;
-    computeArea: () => number;
-}
+import { Shape } from "./shape";
 
-function createCircle(radius: number): Circle {
+// Since a Square is a special type of Rectangle where width = height, 
+// we don't need to define a new interface. We can use the Rectangle interface for Square as well.
+
+function newCircle(radius: number): Shape {
     return {
-        getRadius: function(): number {
-            return radius;
-        },
         computeArea: function(): number {
             return Math.PI * radius * radius;
         }
     }
 }
 
-export { Circle, createCircle };
+export { newCircle };
+
+
