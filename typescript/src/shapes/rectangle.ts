@@ -6,11 +6,14 @@ interface Rectangle {
 
 function newRectangle(width: number, height: number): Rectangle {
     return {
-        getWidth: () => width,
-        getHeight: () => height,
-
-        computeArea: function (): number {
-            return width * height
+        getWidth: function(): number {
+            return width;
+        },
+        getHeight: function(): number {
+            return height;
+        },
+        computeArea: function(): number {
+            return width * height;
         }
     }
 }

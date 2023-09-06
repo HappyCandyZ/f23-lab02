@@ -19,6 +19,6 @@ public class Rectangle implements Shape {
 
     @Override
     public double getArea() {
-        return getHeight() * getWidth();
+        return height * width;
     }
 }
